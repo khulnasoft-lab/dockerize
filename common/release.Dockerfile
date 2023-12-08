@@ -1,4 +1,4 @@
-ARG ALPINE_VERSION="3.16"
+ARG ALPINE_VERSION="3.19"
 
 FROM scratch AS bin-folder
 
