@@ -17,7 +17,7 @@ env:
 
 jobs:
   prepare:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     outputs:
       matrix: ${{ steps.pkgs.outputs.matrix }}
     steps:
@@ -40,7 +40,7 @@ jobs:
           echo ${{ steps.pkgs.outputs.matrix }}
 
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     needs:
       - prepare
     strategy:
@@ -108,7 +108,7 @@ jobs:
           retention-days: 1
 
   dummy-release:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     needs:
       - build
     steps:
