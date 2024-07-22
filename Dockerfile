@@ -2,7 +2,7 @@ ARG LICENSE_TYPE="apache"
 ARG LICENSE_COPYRIGHT_HOLDER="KhulnaSoft dockerize authors"
 ARG LICENSE_FILES=".*\(Dockerfile\|\.go\|\.hcl\|\.mk\|\.sh\)"
 
-FROM ghcr.io/google/addlicense:v1.0.0 AS addlicense
+FROM ghcr.io/google/addlicense:v1.1.1 AS addlicense
 
 FROM alpine:3.19 AS base
 WORKDIR /src
